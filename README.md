@@ -1,4 +1,3 @@
-# hcmc-property-pipeline-saiprice
 # hcmc-property-pipeline (SaiPrice)
 
 A data pipeline for Ho Chi Minh City property listings. It scrapes the data, stores it in SQL, serves it through a Django API, and predicts price with a model trained on it.
