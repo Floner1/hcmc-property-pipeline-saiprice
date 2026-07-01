@@ -4,7 +4,7 @@ A data pipeline for Ho Chi Minh City property listings, with a price prediction 
 
 ## What it does
 
-SaiPrice scrapes property listing data from HCMC real estate sites, cleans it, and stores it in PostgreSQL. A Django REST API serves the data, and a dashboard lets visitors browse and filter listings. A machine learning model estimates price from listing features such as location, size, and property type.
+SaiPrice pulls listing data from batdongsan.com.vn into PostgreSQL, serves it through a Django REST API, and estimates price for each listing using a model trained on location, size, and property type. A dashboard lets visitors browse and filter the results.
 
 ## Status
 
@@ -24,6 +24,7 @@ In development. Build started July 2026.
 
 Planned for a later phase:
 
+- Office listings (second scraping target, same pattern as residential)
 - Price trend charts over time
 - Interactive map view of listings
 
@@ -32,17 +33,17 @@ Planned for a later phase:
 - Python: scraping (BeautifulSoup/requests), machine learning (scikit-learn)
 - PostgreSQL: database
 - Django: backend and REST API
-- Django templates + Chart.js: dashboard
+- Django templates + Tailwind CSS + Chart.js: dashboard
 - Render: deployment
 
 ## Data
 
-Listings are scraped from HCMC real estate sites. If scraped coverage is thin, the project falls back to two public Kaggle datasets: Vietnam Housing Dataset 2024 and House Pricing HCMC.
+Listings are scraped from batdongsan.com.vn. If scraped coverage is thin, the project falls back to two public Kaggle datasets: Vietnam Housing Dataset 2024 and House Pricing HCMC.
 
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/hcmc-property-pipeline.git
+git clone https://github.com/Floner1/hcmc-property-pipeline.git
 cd hcmc-property-pipeline
 python -m venv venv
 source venv/bin/activate
