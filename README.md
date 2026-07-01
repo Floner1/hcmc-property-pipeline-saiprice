@@ -43,8 +43,8 @@ Listings are scraped from batdongsan.com.vn. If scraped coverage is thin, the pr
 ## Setup
 
 ```bash
-git clone https://github.com/Floner1/hcmc-property-pipeline.git
-cd hcmc-property-pipeline
+git clone https://github.com/Floner1/hcmc-property-pipeline-saiprice.git
+cd hcmc-property-pipeline-saiprice
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
